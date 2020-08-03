@@ -1,33 +1,92 @@
 {
 	
-	    "$schema": "http://json-schema.org/schema#",
-
-    "type": "object",
+	"$schema": "http://json-schema.org/schema#",
+    "title": "JSON-Schema Example Profile",
+    "description": "This profile is an example of how to use the JSON Schema wihin the Jamf Pro Custom Application Settings in a managed distribution configuration workflow.",
     "properties": {
 
     	"keyNameString": {
     		"type": "string",
+            "property_order": 5,
     		"title": "This String",
     		"description": "Enter the string value",
     		"default": "myString"
     	},
 
-    	"keyNameNumber": {
-    		"type": "number",
+        "keyNameStringWithOptions": {
+            "type": "string",
+            "property_order": 10,
+            "title": "This String with Options",
+            "description": "Choose your value from a predefined list of options",
+            "options": {
+                "enum_titles": ["Option 1", "Option 2", "Option 3"]
+            },
+            "enum": ["value1", "value2", "value3"],
+            "default": 0
+        },
+
+    	"keyNameInteger": {
+    		"type": "integer",
+            "property_order": 15,
     		"title": "This Number",
-    		"description": "This number is an array of choices. The default is 0",
-    		"default": 0,
-    		"enum": [0, 1, 2, 3, 4]
+    		"description": "You may enter a number here, the default is 0",
+    		"default": 0
     	},
+
+        "keyNameIntegerWithOptions": {
+            "type": "integer",
+            "property_order": 20,
+            "title": "This Number with Options",
+            "description": "This number is an array of choices with titles. Each option maps to a value. The default is 0",
+            "options": {
+                "enum_titles":["Zero, an integer of 0", "One, an integer of 1", "Two, an integer of 2"]
+            },
+            "enum": [0, 1, 2],
+            "default": 0
+        },
+
+        "keyNameArray": {
+            "type": "array",
+            "property_order": 25,
+            "title": "This Array",
+            "description": "This is an array example. You may populate items in a list using this key type.",
+            "items": {
+                "type": "string",
+                "title": "Item in array"
+            }
+        },
 
     	"keyNameBoolean": {
     		"type": "boolean",
+            "property_order": 35,
     		"title": "This Boolean",
     		"description": "This boolean is true or false. The default is false.",
     		"default": "false"
 
-    	}
+    	},
 
+        "keyNameArrayWithDictionaries": {
+            "type": "array",
+            "property_order": 30,
+            "title": "This array with sub-dictionairies",
+            "description": "This array creates a dictionary of strings and allows to select integers or boolean values.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "propertyValue1": {
+                        "type": "string",
+                        "title": "String for Property Value 1"
+                    },
+                    "propertyValue2": {
+                        "type": "integer",
+                        "title": "Integer for Property Value 2"
+                    },
+                    "propertyValue3": {
+                        "type": "boolean",
+                        "title": "Boolean for Property Value 3"
+                    }
+                }
+            }
+        }
     }
-
 }
