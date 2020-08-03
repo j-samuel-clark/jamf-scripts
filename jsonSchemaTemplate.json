@@ -58,7 +58,7 @@
 
     	"keyNameBoolean": {
     		"type": "boolean",
-            "property_order": 35,
+            "property_order": 30,
     		"title": "This Boolean",
     		"description": "This boolean is true or false. The default is false.",
     		"default": "false"
@@ -67,7 +67,7 @@
 
         "keyNameArrayWithDictionaries": {
             "type": "array",
-            "property_order": 30,
+            "property_order": 35,
             "title": "This array with sub-dictionairies",
             "description": "This array creates a dictionary of strings and allows to select integers or boolean values.",
             "items": {
