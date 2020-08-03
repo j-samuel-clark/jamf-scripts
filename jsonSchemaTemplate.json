@@ -1,0 +1,33 @@
+{
+	
+	    "$schema": "http://json-schema.org/schema#",
+
+    "type": "object",
+    "properties": {
+
+    	"keyNameString": {
+    		"type": "string",
+    		"title": "This String",
+    		"description": "Enter the string value",
+    		"default": "myString"
+    	},
+
+    	"keyNameNumber": {
+    		"type": "number",
+    		"title": "This Number",
+    		"description": "This number is an array of choices. The default is 0",
+    		"default": 0,
+    		"enum": [0, 1, 2, 3, 4]
+    	},
+
+    	"keyNameBoolean": {
+    		"type": "boolean",
+    		"title": "This Boolean",
+    		"description": "This boolean is true or false. The default is false.",
+    		"default": "false"
+
+    	}
+
+    }
+
+}
