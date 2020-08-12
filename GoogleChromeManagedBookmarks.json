@@ -1,14 +1,25 @@
 {
 	
 	"$schema": "http://json-schema.org/schema#",
-    "title": "JSON-Schema Example Profile",
-    "description": "This profile is an example of how to use the JSON Schema wihin the Jamf Pro Custom Application Settings in a managed distribution configuration workflow.",
+    "title": "Google Chrome Bookmarks Manager",
+    "description": "This schema designates options for enforcing the bookmarks bar and allowing an administrator to add bookmark URLs as managed bookmarks to a user's Google Chrome",
     "properties": {
 
+    	"BookmarkBarEnabled": {
+
+    		"type": "boolean",
+    		"title": "Enable Bookmarks Bar in Google Chrome",
+    		"description": "This setting forces the bookmark bar on a user's Google Chrome.",
+    		"property_order": 5
+
+    	},
+
         "ManagedBookmarks": {
+
             "type": "array",
             "title": "Bookmarks",
             "description": "Add one bookmark and URL",
+            "property_order": 10,
             "items": {
                 "type": "object",
                 "properties": {
