@@ -1,0 +1,28 @@
+{
+	
+	"$schema": "http://json-schema.org/schema#",
+    "title": "JSON-Schema Example Profile",
+    "description": "This profile is an example of how to use the JSON Schema wihin the Jamf Pro Custom Application Settings in a managed distribution configuration workflow.",
+    "properties": {
+
+        "ManagedBookmarks": {
+            "type": "array",
+            "title": "Bookmarks",
+            "description": "Add one bookmark and URL",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Bookmark Name"
+                    },
+
+                    "url": {
+                        "type": "string",
+                        "title": "Bookmark URL"
+                    }
+                }
+            }
+        }
+    }
+}
