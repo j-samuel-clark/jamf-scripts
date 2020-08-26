@@ -18,8 +18,8 @@ installPkg=""$downloadLocation"/"$pkgName".pkg"	# The location and name of the d
 
 /usr/bin/curl -sL "$downloadUrl" -o "$installPkg"
 
-/usr/sbin/installer -pkg "$installPackage" -target /
+/usr/sbin/installer -pkg "$installPkg" -target /
 
-/bin/rm -r "$installPackage"
+/bin/rm -r "$installPkg"
 
 exit
