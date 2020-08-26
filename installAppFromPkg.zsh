@@ -6,7 +6,7 @@
 # About this program
 #
 # Variables must be defined in Jamf Pro 
-# "$4" Represents the URL where the package must be downloaded
+# "$4" Represents the URL from where the package will be downloaded
 # "$5" Represents what the PKG will be named after being downloaded
 #
 ########################################################################
