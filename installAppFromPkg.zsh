@@ -13,13 +13,13 @@
 downloadUrl="$4"	# The URL must return a file
 pkgName="$5"	# The name of the file after it's downloaded
 downloadLocation="/private/tmp"		# Where the file gets downloaded
-latestPkg=""$downloadLocation"/"$pkgName".pkg"	# The location and name of the downloaded file
+installPkg=""$downloadLocation"/"$pkgName".pkg"	# The location and name of the downloaded file
 ########################################################################
 
-/usr/bin/curl -sL "$downloadUrl" -o "$latestPkg"
+/usr/bin/curl -sL "$downloadUrl" -o "$installPkg"
 
-/usr/sbin/installer -pkg "$latestPackage" -target /
+/usr/sbin/installer -pkg "$installPackage" -target /
 
-/bin/rm -r "$latestPackage"
+/bin/rm -r "$installPackage"
 
 exit
