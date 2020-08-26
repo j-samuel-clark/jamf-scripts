@@ -16,7 +16,7 @@ downloadLocation="/private/tmp"		# Where the file gets downloaded
 latestPkg=""$downloadLocation"/"$pkgName".pkg"	# The location and name of the downloaded file
 ########################################################################
 
-/usr/bin/curl -sL "$pkgUrl" -o "$latestPackage"
+/usr/bin/curl -sL "$downloadUrl" -o "$latestPkg"
 
 /usr/sbin/installer -pkg "$latestPackage" -target /
 
